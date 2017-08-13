@@ -42,3 +42,20 @@ end
 --[[
     Foo2 Failed!
  ]]
+
+function logError(err)
+    print("[ERROR]= " .. err)
+end
+
+-- You can also use xpcall, xpcall works the same as pcall but sets the error handler.
+
+if (xpcall(function() add(20) end, logError)) then
+    -- do something here
+else
+    -- do something here
+end
+
+-- output
+--[[
+     [ERROR]= scripts/ErrorHandling.lua:3 attempt to perform arithmetic __add on number and nil
+ ]]
