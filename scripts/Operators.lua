@@ -115,3 +115,19 @@ print(not(condition1 and condition2))
 --[[
      true
  ]]
+
+-- string concatenation
+print("Hello " .. " Lua" .. "!")
+-- output
+--[[
+    Hello Lua!
+ ]]
+
+-- length operator (length of a table or string)
+print(#"Word")
+print(#{1, false, "string", 25.00, 'a'})
+-- output
+--[[
+    4
+    5
+ ]]
