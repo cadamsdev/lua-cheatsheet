@@ -19,19 +19,11 @@ add(10)
     pcall calls its first argument in protected mode, if there are no errors pcall return true
     plus any values returned by the call. Otherwise, it returns false, plus the error message.
 
-    You need to encapsulate your code in another method here I encapsulated my code
-    in a function called foo1 and foo2
+    You need to encapsulate your code in another function here I encapsulated my code
+    in an anonymous function within the pcall parameters
  ]]
 
-function foo1()
-    return add(20, 10)
-end
-
-function foo2()
-    return add(20)
-end
-
-if (pcall(foo1)) then
+if (pcall(function() add(20, 100) end)) then
     print("Foo1 Success! ")
 else
     print("Foo1 Failed!")
@@ -41,7 +33,7 @@ end
     Foo1 Success!
  ]]
 
-if (pcall(foo2)) then
+if (pcall(function() add(20) end)) then
     print("Foo2 Success!")
 else
     print("Foo2 Failed!")
