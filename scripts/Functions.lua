@@ -21,6 +21,23 @@ end
 
 sayHello("Chad")
 
+--output
+--[[
+Hello Chad!
+ ]]
+
 print(add(2, 3))
 
+-- output
+--[[
+5
+ ]]
+
 varargs("Chad", "Bob", "Sally")
+
+-- output
+--[[
+Chad
+Bob
+Sally
+ ]]

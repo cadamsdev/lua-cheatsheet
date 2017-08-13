@@ -43,6 +43,7 @@ repeat
     count = count + 1
 until(count > 5)
 
+-- output
 --[[
     repeat count: 0
     repeat count: 1
