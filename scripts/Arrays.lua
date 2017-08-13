@@ -1,8 +1,8 @@
 --[[
-    Tables look like arrays in other languages. They are used just like arrays but...
-    index starts at 1 not 0 like most languages.
-
-    They are also not confined to a type, you can store any data type you want. (tuple)
+    Arrays are called tables in Lua. Tables look like arrays but function differently.
+    * Index starts at 1 not 0 like most languages.
+    * Tables are not fixed-length like arrays.
+    * Tables are not confined to a single type. They act like tuples and you can store any data type you want.
  ]]
 
 -- one-dimensional
@@ -52,4 +52,18 @@ print(array[3][2])
 -- output
 --[[
     true
+ ]]
+
+-- Arrays are not fixed in Lua.
+array = {1}
+
+-- This would usually be an issue in most languages.
+array[2] = 2
+
+print(#array)
+print(array[2])
+-- output
+--[[
+    2
+    2
  ]]
