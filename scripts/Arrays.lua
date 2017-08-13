@@ -58,12 +58,15 @@ print(array[3][2])
 array = {1}
 
 -- This would usually be an issue in most languages.
-array[2] = 2
+array[2] = "I am a new element!"
 
+-- This will show how many elements are in the array/table.
 print(#array)
+
+-- This will get the value of the element at the specified index.
 print(array[2])
 -- output
 --[[
-    2
-    2
+    1
+    I am a new element!
  ]]
